@@ -3,7 +3,6 @@
 # one. (assume no ties)
 
 def shortest_word(words):
-    # return min(map(len, words))
     return min(words, key=len)
 
 
@@ -50,7 +49,6 @@ def sorted_valid_passwords(passwords):
     valid = filter(lambda password: not password.isalpha(), passwords)
     return sorted(valid, key=len)
 
-    # valid = list(filter(lambda password : password.isalpha(), passwords))
-    # return 
-                
+
+    # return list(sorted(filter(lambda p: any(not ch.isalpha() for ch in p), passwords), key=len))
 

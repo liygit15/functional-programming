@@ -10,9 +10,10 @@ def shortest_word(words):
 # SUPER CHALLENGE: use functools.reduce
 # Only try this after completing the rest of the activity
 # You will need to research the use of the functools.reduce function
-# def shortest_word(words):
-#     from functools import reduce
-#     pass    
+def shortest_word(words):
+    from functools import reduce
+    return reduce(lambda a,b: a if len(a) < len(b) else b, words)
+
 
 
 # Wave 2
